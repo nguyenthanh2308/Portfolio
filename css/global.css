@@ -1,0 +1,555 @@
+/* ============================================================
+   GLOBAL.CSS — Dual Soul Portfolio Design System
+   🌸 Sakura Mode (Default) | ⚡ Neon Mode
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* ============================================================
+   CSS VARIABLES — SAKURA THEME (DEFAULT)
+   ============================================================ */
+:root {
+  /* Background */
+  --bg-primary: #fdf6f0;
+  --bg-secondary: #fce4ec;
+  --bg-gradient: linear-gradient(135deg, #fdf6f0 0%, #fde8f5 50%, #ede7f6 100%);
+  --bg-card: rgba(255, 255, 255, 0.72);
+  --bg-card-hover: rgba(255, 255, 255, 0.92);
+  --bg-overlay: rgba(253, 246, 240, 0.85);
+
+  /* Colors */
+  --color-primary: #e91e8c;
+  --color-primary-rgb: 233, 30, 140;
+  --color-secondary: #9c27b0;
+  --color-secondary-rgb: 156, 39, 176;
+  --color-accent: #ff80ab;
+  --color-accent-rgb: 255, 128, 171;
+
+  /* Text */
+  --color-text: #37122e;
+  --color-text-muted: #7b5278;
+  --color-text-light: #b39db0;
+  --color-heading: #2d0e29;
+
+  /* Borders */
+  --color-border: rgba(233, 30, 140, 0.18);
+  --color-border-hover: rgba(233, 30, 140, 0.5);
+
+  /* Typography */
+  --font-heading: 'Noto Serif JP', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Noto Serif JP', serif;
+  --font-mono: 'Share Tech Mono', monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 16px rgba(233, 30, 140, 0.08);
+  --shadow-md: 0 8px 32px rgba(233, 30, 140, 0.12);
+  --shadow-lg: 0 20px 60px rgba(233, 30, 140, 0.22);
+  --shadow-hover: 0 24px 64px rgba(233, 30, 140, 0.28);
+  --glow: none;
+
+  /* UI */
+  --blur: blur(20px);
+  --blur-heavy: blur(40px);
+  --navbar-bg: rgba(253, 246, 240, 0.92);
+  --navbar-border: rgba(233, 30, 140, 0.1);
+
+  /* Particles */
+  --particle-color: rgba(255, 128, 171, 0.8);
+
+  /* Spacing */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-med: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-theme: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Deco */
+  --deco-opacity: 0.04;
+}
+
+/* ============================================================
+   CSS VARIABLES — NEON THEME
+   ============================================================ */
+[data-theme="neon"] {
+  --bg-primary: #08000f;
+  --bg-secondary: #110018;
+  --bg-gradient: linear-gradient(135deg, #08000f 0%, #110018 50%, #0a001a 100%);
+  --bg-card: rgba(255, 0, 110, 0.04);
+  --bg-card-hover: rgba(255, 0, 110, 0.09);
+  --bg-overlay: rgba(8, 0, 15, 0.88);
+
+  --color-primary: #ff006e;
+  --color-primary-rgb: 255, 0, 110;
+  --color-secondary: #00f5ff;
+  --color-secondary-rgb: 0, 245, 255;
+  --color-accent: #bf5af2;
+  --color-accent-rgb: 191, 90, 242;
+
+  --color-text: #e8e8f5;
+  --color-text-muted: #a0a0c8;
+  --color-text-light: #60608a;
+  --color-heading: #ffffff;
+
+  --color-border: rgba(255, 0, 110, 0.32);
+  --color-border-hover: rgba(255, 0, 110, 0.75);
+
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Share Tech Mono', monospace;
+
+  --shadow-sm: 0 0 15px rgba(255, 0, 110, 0.2);
+  --shadow-md: 0 0 30px rgba(255, 0, 110, 0.28);
+  --shadow-lg: 0 0 60px rgba(255, 0, 110, 0.4);
+  --shadow-hover: 0 0 80px rgba(255, 0, 110, 0.55), 0 0 160px rgba(255, 0, 110, 0.2);
+  --glow: 0 0 8px var(--color-primary), 0 0 16px var(--color-primary), 0 0 32px var(--color-primary);
+
+  --navbar-bg: rgba(8, 0, 15, 0.92);
+  --navbar-border: rgba(255, 0, 110, 0.22);
+
+  --particle-color: rgba(255, 0, 110, 0.7);
+
+  --deco-opacity: 0.025;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--color-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background var(--ease-theme), color var(--ease-theme);
+  cursor: none;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  line-height: 1.2;
+  transition: font-family var(--ease-theme), color var(--ease-theme);
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; }
+h3 { font-size: clamp(1.25rem, 3vw, 1.8rem); font-weight: 500; }
+h4 { font-size: 1.25rem; font-weight: 500; }
+
+p {
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  transition: color var(--ease-theme);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--ease-fast);
+}
+
+a:hover { color: var(--color-secondary); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+button { font-family: var(--font-body); cursor: pointer; }
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================================
+   SECTION TITLE
+   ============================================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header .jp-label {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+  transition: font-family var(--ease-theme), color var(--ease-theme);
+}
+
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--radius-full);
+  transition: box-shadow var(--ease-theme);
+}
+
+[data-theme="neon"] .section-header h2::after {
+  box-shadow: 0 0 12px var(--color-primary), 0 0 24px var(--color-primary);
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 1.5rem auto 0;
+}
+
+/* ============================================================
+   CARD COMPONENT
+   ============================================================ */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--ease-med),
+    box-shadow var(--ease-med),
+    background var(--ease-theme),
+    border-color var(--ease-theme);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-border-hover);
+  background: var(--bg-card-hover);
+}
+
+/* ============================================================
+   BUTTON COMPONENT
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all var(--ease-med);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity var(--ease-fast);
+}
+
+.btn:hover::before { opacity: 1; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="neon"] .btn-primary {
+  box-shadow: var(--shadow-md), 0 0 20px rgba(var(--color-primary-rgb), 0.4);
+}
+
+[data-theme="neon"] .btn-primary:hover {
+  box-shadow: var(--shadow-hover), 0 0 40px rgba(var(--color-primary-rgb), 0.6);
+}
+
+[data-theme="neon"] .btn-outline:hover {
+  box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.5);
+}
+
+/* ============================================================
+   BADGES / TAGS
+   ============================================================ */
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-accent);
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.25);
+  transition: all var(--ease-theme);
+}
+
+[data-theme="neon"] .tag {
+  box-shadow: 0 0 8px rgba(var(--color-primary-rgb), 0.3);
+}
+
+/* ============================================================
+   CANVAS (Particles Background)
+   ============================================================ */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   CUSTOM CURSOR
+   ============================================================ */
+#cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width var(--ease-fast), height var(--ease-fast), background var(--ease-theme);
+  mix-blend-mode: normal;
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.12s ease,
+    height 0.12s ease,
+    border-color var(--ease-theme),
+    transform 0.08s ease;
+  opacity: 0.6;
+}
+
+#cursor-dot.cursor-hover {
+  width: 12px;
+  height: 12px;
+  background: var(--color-secondary);
+}
+
+#cursor-ring.cursor-hover {
+  width: 54px;
+  height: 54px;
+  border-color: var(--color-secondary);
+  opacity: 0.4;
+}
+
+[data-theme="neon"] #cursor-dot {
+  box-shadow: 0 0 8px var(--color-primary), 0 0 16px var(--color-primary);
+}
+
+[data-theme="neon"] #cursor-ring {
+  box-shadow: 0 0 8px rgba(var(--color-primary-rgb), 0.4);
+}
+
+/* ============================================================
+   SCROLL ANIMATIONS
+   ============================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* ============================================================
+   NEON SCANLINE OVERLAY
+   ============================================================ */
+[data-theme="neon"] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 0, 110, 0.012) 2px,
+    rgba(255, 0, 110, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 9990;
+}
+
+/* ============================================================
+   DECORATIVE TEXT BACKGROUND
+   ============================================================ */
+.deco-bg-text {
+  position: absolute;
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  opacity: var(--deco-opacity);
+  user-select: none;
+  pointer-events: none;
+  font-family: var(--font-heading);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-primary), var(--color-secondary));
+  border-radius: 3px;
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+::selection {
+  background: rgba(var(--color-primary-rgb), 0.28);
+  color: var(--color-text);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  #cursor-dot, #cursor-ring { display: none; }
+  h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .section { padding: 4rem 0; }
+  .container, .section-inner { padding: 0 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 3rem 0; }
+  .container, .section-inner { padding: 0 1rem; }
+}

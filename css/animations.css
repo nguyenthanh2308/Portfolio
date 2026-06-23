@@ -1,0 +1,275 @@
+/* ============================================================
+   ANIMATIONS.CSS — Keyframes & Transitions
+   ============================================================ */
+
+/* ============================================================
+   SAKURA PETALS — Falling animation
+   ============================================================ */
+@keyframes sakura-fall {
+  0%   { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 1; }
+  25%  { transform: translateY(25vh) rotate(90deg) translateX(20px); }
+  50%  { transform: translateY(50vh) rotate(180deg) translateX(-15px); }
+  75%  { transform: translateY(75vh) rotate(270deg) translateX(25px); }
+  100% { transform: translateY(110vh) rotate(360deg) translateX(-10px); opacity: 0; }
+}
+
+@keyframes sakura-sway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  33%       { transform: translateX(15px) rotate(8deg); }
+  66%       { transform: translateX(-10px) rotate(-5deg); }
+}
+
+/* ============================================================
+   NEON GLITCH
+   ============================================================ */
+@keyframes glitch {
+  0%   { clip-path: inset(40% 0 61% 0); transform: skew(0.15deg); }
+  10%  { clip-path: inset(92% 0 1% 0);  transform: skew(0.4deg); }
+  20%  { clip-path: inset(43% 0 1% 0);  transform: skew(0.1deg); }
+  30%  { clip-path: inset(25% 0 58% 0); transform: skew(0.5deg); }
+  40%  { clip-path: inset(54% 0 7% 0);  transform: skew(0.2deg); }
+  50%  { clip-path: inset(58% 0 43% 0); transform: skew(0.3deg); }
+  60%  { clip-path: inset(11% 0 11% 0); transform: skew(0.1deg); }
+  70%  { clip-path: inset(78% 0 19% 0); transform: skew(0.4deg); }
+  80%  { clip-path: inset(91% 0 6% 0);  transform: skew(0.2deg); }
+  90%  { clip-path: inset(13% 0 85% 0); transform: skew(0.35deg); }
+  100% { clip-path: inset(73% 0 7% 0);  transform: skew(0.1deg); }
+}
+
+@keyframes glitch-2 {
+  0%   { clip-path: inset(65% 0 12% 0); transform: skew(-0.2deg) translateX(-2px); }
+  15%  { clip-path: inset(20% 0 75% 0); transform: skew(0.3deg) translateX(2px); }
+  30%  { clip-path: inset(85% 0 5% 0);  transform: skew(-0.1deg) translateX(-1px); }
+  45%  { clip-path: inset(35% 0 50% 0); transform: skew(0.4deg) translateX(3px); }
+  60%  { clip-path: inset(5% 0 90% 0);  transform: skew(-0.3deg) translateX(-2px); }
+  75%  { clip-path: inset(55% 0 30% 0); transform: skew(0.2deg) translateX(1px); }
+  90%  { clip-path: inset(10% 0 65% 0); transform: skew(-0.15deg) translateX(-3px); }
+  100% { clip-path: inset(40% 0 45% 0); transform: skew(0.25deg) translateX(2px); }
+}
+
+/* ============================================================
+   TYPEWRITER CURSOR BLINK
+   ============================================================ */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ============================================================
+   PULSE
+   ============================================================ */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.08); opacity: 0.85; }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes pulse-neon {
+  0%, 100% { box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary); }
+  50%       { box-shadow: 0 0 20px var(--color-primary), 0 0 40px var(--color-primary), 0 0 80px var(--color-primary); }
+}
+
+/* ============================================================
+   FLOAT
+   ============================================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+
+/* ============================================================
+   SPIN / ROTATE
+   ============================================================ */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   FADE IN VARIANTS
+   ============================================================ */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-down {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-in-right {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   SCALE
+   ============================================================ */
+@keyframes scale-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ============================================================
+   SHIMMER (Loading skeleton effect)
+   ============================================================ */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ============================================================
+   WAVE
+   ============================================================ */
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25%       { transform: rotate(15deg); }
+  75%       { transform: rotate(-10deg); }
+}
+
+/* ============================================================
+   SLIDE IN (for page transitions)
+   ============================================================ */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-out-left {
+  from { transform: translateX(0); opacity: 1; }
+  to   { transform: translateX(-100%); opacity: 0; }
+}
+
+/* ============================================================
+   PARTICLE TWINKLE
+   ============================================================ */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50%       { opacity: 1; transform: scale(1.2); }
+}
+
+/* ============================================================
+   NEON FLICKER
+   ============================================================ */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 7px var(--color-primary),
+      0 0 10px var(--color-primary),
+      0 0 21px var(--color-primary),
+      0 0 42px var(--color-secondary),
+      0 0 82px var(--color-secondary),
+      0 0 92px var(--color-secondary),
+      0 0 102px var(--color-secondary),
+      0 0 151px var(--color-secondary);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* ============================================================
+   PROGRESS BAR FILL
+   ============================================================ */
+@keyframes progress-fill {
+  from { width: 0%; }
+  to   { width: var(--target-width, 0%); }
+}
+
+/* ============================================================
+   BORDER ROTATE (holographic card effect)
+   ============================================================ */
+@keyframes border-rotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   MARQUEE (scrolling text)
+   ============================================================ */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   AUDIO WAVE (equalizer bars)
+   ============================================================ */
+@keyframes bar-wave-1 { 0%, 100% { height: 4px; } 50% { height: 16px; } }
+@keyframes bar-wave-2 { 0%, 100% { height: 10px; } 50% { height: 4px; } }
+@keyframes bar-wave-3 { 0%, 100% { height: 6px; } 50% { height: 18px; } }
+@keyframes bar-wave-4 { 0%, 100% { height: 14px; } 50% { height: 6px; } }
+@keyframes bar-wave-5 { 0%, 100% { height: 8px; } 50% { height: 14px; } }
+
+/* ============================================================
+   UTILITY ANIMATION CLASSES
+   ============================================================ */
+.anim-float      { animation: float 4s ease-in-out infinite; }
+.anim-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.anim-pulse      { animation: pulse 2.5s ease-in-out infinite; }
+.anim-spin       { animation: spin 1s linear infinite; }
+.anim-spin-slow  { animation: spin-slow 8s linear infinite; }
+.anim-wave       { animation: wave 1.5s ease-in-out infinite; }
+
+[data-theme="neon"] .anim-neon-flicker {
+  animation: neon-flicker 4s infinite;
+}
+
+/* ============================================================
+   GLITCH TEXT (Neon Mode)
+   ============================================================ */
+.glitch-text {
+  position: relative;
+}
+
+[data-theme="neon"] .glitch-text::before,
+[data-theme="neon"] .glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+[data-theme="neon"] .glitch-text::before {
+  color: var(--color-secondary);
+  animation: glitch 2.5s infinite linear alternate-reverse;
+  left: 2px;
+  text-shadow: none;
+  opacity: 0.7;
+}
+
+[data-theme="neon"] .glitch-text::after {
+  color: var(--color-accent);
+  animation: glitch-2 2.5s infinite linear alternate-reverse;
+  left: -2px;
+  text-shadow: none;
+  opacity: 0.7;
+}

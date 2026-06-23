@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sakura">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Your Name Portfolio</title>
+  <meta name="description" content="Explore my projects — web apps, UI designs, and creative experiments.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/music-player.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+  <canvas id="particle-canvas"></canvas>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-mark">✦</div>
+        <span class="navbar-logo-text">Your<span>Name</span></span>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+        <li><a href="about.html"><span class="nav-icon">👤</span> About</a></li>
+        <li><a href="skills.html"><span class="nav-icon">🛠️</span> Skills</a></li>
+        <li><a href="projects.html"><span class="nav-icon">💼</span> Projects</a></li>
+        <li><a href="contact.html"><span class="nav-icon">📬</span> Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Switch theme">
+          <div class="theme-toggle-track"><span>🌸</span><span>⚡</span></div>
+          <div class="theme-toggle-thumb">🌸</div>
+        </button>
+        <button class="navbar-hamburger" aria-label="Menu">
+          <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+    <div class="navbar-mobile">
+      <a href="index.html"><span>🏠</span> Home</a>
+      <a href="about.html"><span>👤</span> About</a>
+      <a href="skills.html"><span>🛠️</span> Skills</a>
+      <a href="projects.html"><span>💼</span> Projects</a>
+      <a href="contact.html"><span>📬</span> Contact</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="page-wrapper">
+    <section class="projects-section section">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="jp-label">プロジェクト</span>
+          <h2>My Projects</h2>
+          <p>A collection of things I've built — from fun experiments to real-world apps.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="projects-filters fade-in delay-1">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web App</button>
+          <button class="filter-btn" data-filter="ui">UI/UX</button>
+          <button class="filter-btn" data-filter="tool">Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Featured Project -->
+          <div class="project-card featured fade-in delay-1" data-category="web">
+            <div class="project-thumbnail">
+              <div class="project-thumbnail-placeholder">🌟</div>
+              <div class="project-num-badge">01</div>
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Live Demo</a>
+                <a href="https://github.com/YOUR_GITHUB" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-featured-badge">⭐ Featured</span>
+              <span class="project-category">Web Application</span>
+              <h3 class="project-title">Your Featured Project</h3>
+              <p class="project-desc">
+                Replace this with your main project description. What problem does it solve?
+                What technologies did you use? What makes it special? This is your chance to shine! ✨
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+                <span class="project-tag">CSS3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card scale-in delay-2" data-category="ui">
+            <div class="project-thumbnail">
+              <div class="project-thumbnail-placeholder">🎨</div>
+              <div class="project-num-badge">02</div>
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
+                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">UI / Design</span>
+              <h3 class="project-title">UI Design Project</h3>
+              <p class="project-desc">
+                A beautiful UI/UX project — describe what you designed, the tools you used, and what inspired you.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Figma</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">HTML5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card scale-in delay-3" data-category="tool">
+            <div class="project-thumbnail">
+              <div class="project-thumbnail-placeholder">🔧</div>
+              <div class="project-num-badge">03</div>
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
+                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Developer Tool</span>
+              <h3 class="project-title">Developer Tool</h3>
+              <p class="project-desc">
+                A useful tool or utility you built. What does it do? How does it help developers or users?
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">CLI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card scale-in delay-4" data-category="web">
+            <div class="project-thumbnail">
+              <div class="project-thumbnail-placeholder">🚀</div>
+              <div class="project-num-badge">04</div>
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
+                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Web Application</span>
+              <h3 class="project-title">Another Web Project</h3>
+              <p class="project-desc">
+                Add your project description here. Keep it concise but informative — 2-3 sentences is perfect!
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card scale-in delay-5" data-category="ui">
+            <div class="project-thumbnail">
+              <div class="project-thumbnail-placeholder">💡</div>
+              <div class="project-num-badge">05</div>
+              <div class="project-overlay">
+                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
+                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">UI / Design</span>
+              <h3 class="project-title">Creative Experiment</h3>
+              <p class="project-desc">
+                Sometimes the best projects start as fun experiments! What creative idea did you bring to life?
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Canvas API</span>
+                <span class="project-tag">CSS Animations</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="fade-in" style="text-align:center;margin-top:3.5rem;">
+          <p style="margin-bottom:1.5rem;font-size:1rem;">Want to see more? Check out my GitHub for all projects 🐙</p>
+          <a href="https://github.com/YOUR_GITHUB" class="btn btn-primary" target="_blank">View All on GitHub ↗</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="music-player"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/music-player.js"></script>
+</body>
+</html>

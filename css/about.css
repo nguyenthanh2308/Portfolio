@@ -1,0 +1,319 @@
+/* ============================================================
+   ABOUT.CSS — About Me Page
+   ============================================================ */
+
+/* ============================================================
+   ABOUT HERO
+   ============================================================ */
+.about-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* ============================================================
+   PROFILE CARD
+   ============================================================ */
+.profile-card {
+  position: relative;
+  text-align: center;
+}
+
+.profile-img-wrap {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 1.5rem;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: box-shadow var(--ease-theme);
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-theme="neon"] .profile-img {
+  box-shadow: var(--shadow-md), 0 0 30px rgba(255, 0, 110, 0.3);
+}
+
+/* Corner decorations */
+.profile-img-wrap::before,
+.profile-img-wrap::after {
+  content: '';
+  position: absolute;
+  border-radius: var(--radius-sm);
+  z-index: -1;
+}
+
+.profile-img-wrap::before {
+  inset: -8px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+              linear-gradient(135deg, var(--color-primary), var(--color-secondary)) border-box;
+  opacity: 0.4;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.profile-role {
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  transition: font-family var(--ease-theme), color var(--ease-theme);
+}
+
+/* Profile Info Items */
+.profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.profile-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.profile-info-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--color-primary-rgb), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: background var(--ease-theme);
+}
+
+.profile-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.profile-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  background: var(--bg-card);
+  transition: all var(--ease-fast);
+}
+
+.profile-social-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================================
+   ABOUT CONTENT
+   ============================================================ */
+.about-content {}
+
+.about-greeting {
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+  transition: font-family var(--ease-theme), color var(--ease-theme);
+}
+
+.about-title {
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.about-desc {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+/* Anime Quote Box */
+.anime-quote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.06);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  position: relative;
+  transition: all var(--ease-theme);
+}
+
+.anime-quote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--color-primary);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.anime-quote p {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.anime-quote cite {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-family: var(--font-accent);
+  transition: font-family var(--ease-theme), color var(--ease-theme);
+}
+
+[data-theme="neon"] .anime-quote {
+  box-shadow: inset 0 0 20px rgba(255, 0, 110, 0.05);
+}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+.timeline {
+  margin-top: 2.5rem;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+  opacity: 0.3;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.625rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.15);
+  transition: box-shadow var(--ease-theme);
+}
+
+[data-theme="neon"] .timeline-item::before {
+  box-shadow: 0 0 0 3px rgba(255, 0, 110, 0.2), 0 0 10px rgba(255, 0, 110, 0.4);
+}
+
+.timeline-year {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+  transition: font-family var(--ease-theme), color var(--ease-theme);
+}
+
+.timeline-event {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.timeline-desc {
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .profile-info-list { text-align: left; max-width: 300px; margin: 0 auto 1.5rem; }
+  .anime-quote { text-align: left; }
+  .timeline { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .profile-img-wrap { width: 220px; height: 220px; }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sakura">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Anime Portfolio</title>
+  <meta name="description" content="Welcome to my anime-styled portfolio — Developer, Creator, and Dreamer.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/splash.css">
+  <link rel="stylesheet" href="css/music-player.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ===================== SPLASH SCREEN ===================== -->
+  <div id="splash-screen">
+    <canvas id="splash-canvas"></canvas>
+    <div class="splash-corners">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="splash-content">
+      <div class="splash-logo-ring">
+        <div class="splash-logo-inner">✦</div>
+      </div>
+      <div>
+        <h1 class="splash-title">
+          <span class="name-color">YOUR NAME</span>
+        </h1>
+        <p class="splash-subtitle" id="splash-subtitle">Initializing...</p>
+      </div>
+      <div class="splash-loader">
+        <div class="splash-loader-bar" id="splash-loader-bar"></div>
+      </div>
+      <button class="splash-enter-btn" id="splash-enter-btn">
+        <div class="pulse-ring"></div>
+        ✦ ENTER WORLD ✦
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== PARTICLE CANVAS ===================== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-mark">✦</div>
+        <span class="navbar-logo-text">Your<span>Name</span></span>
+      </a>
+
+      <ul class="navbar-links">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+        <li><a href="about.html"><span class="nav-icon">👤</span> About</a></li>
+        <li><a href="skills.html"><span class="nav-icon">🛠️</span> Skills</a></li>
+        <li><a href="projects.html"><span class="nav-icon">💼</span> Projects</a></li>
+        <li><a href="contact.html"><span class="nav-icon">📬</span> Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Switch theme">
+          <div class="theme-toggle-track">
+            <span>🌸</span><span>⚡</span>
+          </div>
+          <div class="theme-toggle-thumb">🌸</div>
+        </button>
+        <button class="navbar-hamburger" aria-label="Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="navbar-mobile">
+      <a href="index.html"><span>🏠</span> Home</a>
+      <a href="about.html"><span>👤</span> About</a>
+      <a href="skills.html"><span>🛠️</span> Skills</a>
+      <a href="projects.html"><span>💼</span> Projects</a>
+      <a href="contact.html"><span>📬</span> Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <main class="page-wrapper">
+    <section class="hero">
+      <div class="hero-inner">
+
+        <!-- Text Side -->
+        <div class="hero-text">
+          <div class="hero-eyebrow fade-in">
+            <span class="hero-eyebrow-line"></span>
+            <span>ようこそ · Welcome</span>
+          </div>
+
+          <h1 class="hero-name fade-in delay-1">
+            <span class="hero-name-first">Hello, I'm</span>
+            <span class="hero-name-last glitch-text" data-text="Your Name">Your Name</span>
+          </h1>
+
+          <p class="hero-tagline fade-in delay-2">
+            <span id="typewriter-text"
+              data-phrases='["Frontend Developer", "UI/UX Enthusiast", "Creative Coder", "Anime Fan 🌸"]'>
+            </span><span class="typewriter-cursor"></span>
+          </p>
+
+          <p class="hero-desc fade-in delay-3">
+            Passionate about building beautiful, interactive digital experiences.
+            I turn ideas into elegant code — one pixel at a time. ✨
+          </p>
+
+          <div class="hero-cta fade-in delay-4">
+            <a href="projects.html" class="btn btn-primary">View My Work 🚀</a>
+            <a href="contact.html" class="btn btn-outline">Get In Touch 📬</a>
+          </div>
+
+          <div class="hero-socials fade-in delay-5">
+            <a href="https://github.com/YOUR_GITHUB" class="social-link" title="GitHub" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN" class="social-link" title="LinkedIn" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:your.email@example.com" class="social-link" title="Email">📧</a>
+          </div>
+
+          <div class="hero-stats fade-in delay-6">
+            <div class="stat-item">
+              <span class="stat-number" data-count="5" data-suffix="+">0+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="2" data-suffix="+ yrs">0</span>
+              <span class="stat-label">Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="10" data-suffix="+">0+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Side -->
+        <div class="hero-visual fade-right">
+          <div class="hero-avatar-wrap">
+            <div class="avatar-ring avatar-ring-1"></div>
+            <div class="avatar-ring avatar-ring-2"></div>
+
+            <div class="avatar-circle">🧑‍💻</div>
+
+            <div class="avatar-badge avatar-badge-1">
+              <span class="avatar-badge-icon">⚡</span>
+              <span>Full Stack Dev</span>
+            </div>
+            <div class="avatar-badge avatar-badge-2">
+              <span class="avatar-badge-icon">🌸</span>
+              <span>UI Enthusiast</span>
+            </div>
+          </div>
+          <div class="hero-deco-text">Dev</div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" onclick="document.getElementById('about-teaser').scrollIntoView({behavior:'smooth'})">
+        <span>Scroll Down</span>
+        <div class="scroll-indicator-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Teaser -->
+    <section id="about-teaser" style="padding: 5rem 0; text-align:center;">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="jp-label">私について</span>
+          <h2>Who Am I?</h2>
+        </div>
+        <p class="fade-in delay-1" style="max-width:600px;margin:0 auto 2.5rem;font-size:1.05rem;">
+          I'm a passionate developer who loves creating beautiful web experiences with a touch of creativity.
+          Let me take you on a journey through my work and skills.
+        </p>
+        <div class="fade-in delay-2" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary">Learn More About Me</a>
+          <a href="skills.html" class="btn btn-outline">See My Skills</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== MUSIC PLAYER ===================== -->
+  <div id="music-player"></div>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="js/theme.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/splash.js"></script>
+  <script src="js/music-player.js"></script>
+</body>
+</html>

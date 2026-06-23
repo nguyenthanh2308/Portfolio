@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sakura">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Your Name Portfolio</title>
+  <meta name="description" content="Technical skills and technologies I work with as a developer.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/music-player.css">
+  <link rel="stylesheet" href="css/skills.css">
+</head>
+<body>
+
+  <canvas id="particle-canvas"></canvas>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-mark">✦</div>
+        <span class="navbar-logo-text">Your<span>Name</span></span>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+        <li><a href="about.html"><span class="nav-icon">👤</span> About</a></li>
+        <li><a href="skills.html"><span class="nav-icon">🛠️</span> Skills</a></li>
+        <li><a href="projects.html"><span class="nav-icon">💼</span> Projects</a></li>
+        <li><a href="contact.html"><span class="nav-icon">📬</span> Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" title="Switch theme">
+          <div class="theme-toggle-track"><span>🌸</span><span>⚡</span></div>
+          <div class="theme-toggle-thumb">🌸</div>
+        </button>
+        <button class="navbar-hamburger" aria-label="Menu">
+          <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+    <div class="navbar-mobile">
+      <a href="index.html"><span>🏠</span> Home</a>
+      <a href="about.html"><span>👤</span> About</a>
+      <a href="skills.html"><span>🛠️</span> Skills</a>
+      <a href="projects.html"><span>💼</span> Projects</a>
+      <a href="contact.html"><span>📬</span> Contact</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="page-wrapper">
+    <section class="skills-section section">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="jp-label">スキル</span>
+          <h2>My Skills</h2>
+          <p>Technologies and tools I work with to bring ideas to life.</p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+
+          <!-- Frontend -->
+          <div class="skill-category-card fade-in delay-1">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">🎨</div>
+              <span class="skill-category-title">Frontend</span>
+              <span class="skill-category-count">4 skills</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🟠</span> HTML5</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🔵</span> CSS3</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🟡</span> JavaScript</span>
+                  <span class="skill-percent">82%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="82%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">⚛️</span> React</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="70%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category-card fade-in delay-2">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">⚙️</div>
+              <span class="skill-category-title">Backend</span>
+              <span class="skill-category-count">3 skills</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🟢</span> Node.js</span>
+                  <span class="skill-percent">65%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="65%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🐍</span> Python</span>
+                  <span class="skill-percent">60%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="60%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🗄️</span> SQL</span>
+                  <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="70%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Others -->
+          <div class="skill-category-card fade-in delay-3">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">🔧</div>
+              <span class="skill-category-title">Tools & Others</span>
+              <span class="skill-category-count">4 skills</span>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🐙</span> Git/GitHub</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🎭</span> Figma</span>
+                  <span class="skill-percent">72%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="72%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">🐳</span> Docker</span>
+                  <span class="skill-percent">45%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="45%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header">
+                  <span class="skill-name"><span class="skill-name-icon">▲</span> Vercel</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar-wrap"><div class="skill-bar" data-width="80%"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tech Icons Grid -->
+        <div class="tech-stack-section fade-in">
+          <p class="tech-stack-title">Technologies I've worked with</p>
+          <div class="tech-icons-grid">
+            <div class="tech-icon-item scale-in delay-1"><span class="tech-icon-emoji">🌐</span><span class="tech-icon-name">HTML5</span></div>
+            <div class="tech-icon-item scale-in delay-1"><span class="tech-icon-emoji">🎨</span><span class="tech-icon-name">CSS3</span></div>
+            <div class="tech-icon-item scale-in delay-2"><span class="tech-icon-emoji">📜</span><span class="tech-icon-name">JavaScript</span></div>
+            <div class="tech-icon-item scale-in delay-2"><span class="tech-icon-emoji">⚛️</span><span class="tech-icon-name">React</span></div>
+            <div class="tech-icon-item scale-in delay-3"><span class="tech-icon-emoji">🟢</span><span class="tech-icon-name">Node.js</span></div>
+            <div class="tech-icon-item scale-in delay-3"><span class="tech-icon-emoji">🐍</span><span class="tech-icon-name">Python</span></div>
+            <div class="tech-icon-item scale-in delay-4"><span class="tech-icon-emoji">🗄️</span><span class="tech-icon-name">MySQL</span></div>
+            <div class="tech-icon-item scale-in delay-4"><span class="tech-icon-emoji">🐙</span><span class="tech-icon-name">GitHub</span></div>
+            <div class="tech-icon-item scale-in delay-5"><span class="tech-icon-emoji">🎭</span><span class="tech-icon-name">Figma</span></div>
+            <div class="tech-icon-item scale-in delay-5"><span class="tech-icon-emoji">▲</span><span class="tech-icon-name">Vercel</span></div>
+            <div class="tech-icon-item scale-in delay-6"><span class="tech-icon-emoji">🐳</span><span class="tech-icon-name">Docker</span></div>
+            <div class="tech-icon-item scale-in delay-6"><span class="tech-icon-emoji">📱</span><span class="tech-icon-name">Responsive</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="music-player"></div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/music-player.js"></script>
+</body>
+</html>
