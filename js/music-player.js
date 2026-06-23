@@ -559,6 +559,14 @@ const MusicPlayer = (() => {
     loadTrack(currentIndex);
     updateControlStates();
     setVolume(audio.volume || 0.7);
+
+    // Pages without a splash screen should autoplay directly.
+    // Pages WITH a splash screen rely on the 'splashDismissed' event (bound in bindEvents).
+    if (!document.getElementById('splash-screen')) {
+      setTimeout(() => {
+        if (playlist[currentIndex]?.src) play();
+      }, 800);
+    }
   };
 
   return { init };
