@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name | Anime Portfolio</title>
   <meta name="description" content="Welcome to my anime-styled portfolio — Developer, Creator, and Dreamer.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.ico">
+
+  <!-- Open Graph (preview khi share link) -->
+  <meta property="og:title" content="Your Name | Anime Portfolio">
+  <meta property="og:description" content="Welcome to my anime-styled portfolio — Developer, Creator, and Dreamer.">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/images/og-image.png">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/navbar.css">
@@ -157,7 +169,10 @@
             <div class="avatar-ring avatar-ring-1"></div>
             <div class="avatar-ring avatar-ring-2"></div>
 
-            <div class="avatar-circle">🧑‍💻</div>
+            <div class="avatar-circle">
+              <img src="assets/images/avatar.jpg" alt="Your Name"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='🧑‍💻';">
+            </div>
 
             <div class="avatar-badge avatar-badge-1">
               <span class="avatar-badge-icon">⚡</span>

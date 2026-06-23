@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Your Name Portfolio</title>
   <meta name="description" content="Learn more about me — my background, journey, and passion for development.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About | Your Name Portfolio">
+  <meta property="og:description" content="Learn more about me — my background, journey, and passion for development.">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/images/og-image.png">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/navbar.css">
@@ -58,7 +70,10 @@
         <!-- Profile Card -->
         <div class="profile-card fade-left">
           <div class="profile-img-wrap">
-            <div class="profile-img anim-float">🧑‍💻</div>
+            <div class="profile-img anim-float">
+            <img src="assets/images/avatar.jpg" alt="Your Name"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='🧑‍💻';">
+          </div>
           </div>
 
           <h2 class="profile-name">Your Full Name</h2>
