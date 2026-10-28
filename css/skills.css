@@ -85,7 +85,22 @@
   gap: 1.1rem;
 }
 
-.skill-item {}
+.skill-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skill-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.skill-detail {
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
 
 .skill-item-header {
   display: flex;

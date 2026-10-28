@@ -173,16 +173,18 @@ const AnimationManager = (() => {
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
 
         const filter = btn.dataset.filter;
         projectCards.forEach(card => {
           const category = card.dataset.category || 'all';
           const show = filter === 'all' || category.includes(filter);
-          card.style.opacity = show ? '1' : '0.3';
-          card.style.transform = show ? '' : 'scale(0.95)';
-          card.style.pointerEvents = show ? '' : 'none';
+          card.hidden = !show;
         });
       });
     });

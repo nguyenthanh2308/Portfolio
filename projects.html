@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="sakura">
+<html lang="vi" data-theme="sakura">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Yuzuriha Portfolio</title>
-  <meta name="description" content="Explore my projects — web apps, UI designs, and creative experiments.">
+  <title>Dự án | Nguyễn Minh Thành</title>
+  <meta name="description" content="Các dự án phần mềm thực tế của Nguyễn Minh Thành: quản lý khách sạn, thương mại điện tử và portfolio.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="apple-touch-icon" href="assets/icons/favicon.svg">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Projects | Your Name Portfolio">
-  <meta property="og:description" content="Explore my projects — web apps, UI designs, and creative experiments.">
+  <meta property="og:title" content="Dự án | Nguyễn Minh Thành">
+  <meta property="og:description" content="Các dự án phần mềm thực tế của Nguyễn Minh Thành: quản lý khách sạn, thương mại điện tử và portfolio.">
   <meta property="og:image" content="assets/images/og-image.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -71,160 +71,111 @@
 
         <div class="section-header fade-in">
           <span class="jp-label">プロジェクト</span>
-          <h2>My Projects</h2>
-          <p>A collection of things I've built — from fun experiments to real-world apps.</p>
+          <h2>Dự án của tôi</h2>
+          <p>Những sản phẩm tôi đã xây dựng, từ ứng dụng quản lý đến website cá nhân.</p>
         </div>
 
         <!-- Filter Tabs -->
-        <div class="projects-filters fade-in delay-1">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="web">Web App</button>
-          <button class="filter-btn" data-filter="ui">UI/UX</button>
-          <button class="filter-btn" data-filter="tool">Tools</button>
+        <div class="projects-filters fade-in delay-1" role="group" aria-label="Lọc dự án">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Ứng dụng web</button>
+          <button class="filter-btn" type="button" data-filter="architecture" aria-pressed="false">Microservices</button>
         </div>
 
-        <!-- Projects Grid -->
         <div class="projects-grid">
-
-          <!-- Featured Project -->
-          <div class="project-card featured fade-in delay-1" data-category="web">
+          <article class="project-card featured fade-in" data-category="web">
             <div class="project-thumbnail">
-              <img src="assets/images/projects/project-1.png" alt="Featured Project" class="project-thumbnail-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="project-thumbnail-placeholder" style="display:none">🌟</div>
+              <div class="project-thumbnail-placeholder" aria-hidden="true">🏨</div>
               <div class="project-num-badge">01</div>
-              <div class="project-overlay">
-                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Live Demo</a>
-                <a href="https://github.com/nguyenthanh2308" class="project-overlay-btn project-overlay-btn-outline"
-                  target="_blank">⭐ GitHub</a>
-              </div>
             </div>
             <div class="project-body">
-              <span class="project-featured-badge">⭐ Featured</span>
-              <span class="project-category">Web Application</span>
-              <h3 class="project-title">Your Featured Project</h3>
-              <p class="project-desc">
-                Replace this with your main project description. What problem does it solve?
-                What technologies did you use? What makes it special? This is your chance to shine! ✨
-              </p>
+              <span class="project-featured-badge">⭐ Nổi bật</span>
+              <span class="project-category">Web application · Full stack</span>
+              <h3 class="project-title">Hệ thống quản lý khách sạn (Đồ án 2)</h3>
+              <p class="project-desc">Ứng dụng quản lý và đặt phòng với giao diện cho khách, lễ tân, quản lý và housekeeping. Có tìm phòng, đặt phòng, check-in/check-out, hóa đơn, báo cáo và cập nhật trạng thái phòng theo thời gian thực.</p>
               <div class="project-tags">
-                <span class="project-tag">React</span>
-                <span class="project-tag">Node.js</span>
-                <span class="project-tag">MongoDB</span>
-                <span class="project-tag">CSS3</span>
+                <span class="project-tag">Angular 17</span>
+                <span class="project-tag">ASP.NET Core 8</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">SignalR</span>
+                <span class="project-tag">JWT</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/nguyenthanh2308/Do_an_CNPM_2" target="_blank" rel="noopener noreferrer">Xem mã nguồn ↗</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Project 2 -->
-          <div class="project-card scale-in delay-2" data-category="ui">
+          <article class="project-card fade-in" data-category="web">
             <div class="project-thumbnail">
-              <img src="assets/images/projects/project-2.png" alt="UI Design Project" class="project-thumbnail-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="project-thumbnail-placeholder" style="display:none">🎨</div>
+              <div class="project-thumbnail-placeholder" aria-hidden="true">🛎️</div>
               <div class="project-num-badge">02</div>
-              <div class="project-overlay">
-                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
-                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
-              </div>
             </div>
             <div class="project-body">
-              <span class="project-category">UI / Design</span>
-              <h3 class="project-title">UI Design Project</h3>
-              <p class="project-desc">
-                A beautiful UI/UX project — describe what you designed, the tools you used, and what inspired you.
-              </p>
+              <span class="project-category">Web application · MVC</span>
+              <h3 class="project-title">Hệ thống quản lý và bán phòng khách sạn (Đồ án 1)</h3>
+              <p class="project-desc">Ứng dụng ASP.NET Core MVC cho nghiệp vụ phòng và đặt phòng. Mã nguồn có các luồng xác thực, tìm phòng, đặt phòng và quản lý khách hàng.</p>
               <div class="project-tags">
-                <span class="project-tag">Figma</span>
-                <span class="project-tag">CSS3</span>
-                <span class="project-tag">HTML5</span>
+                <span class="project-tag">C#</span>
+                <span class="project-tag">ASP.NET Core MVC</span>
+                <span class="project-tag">Entity Framework Core</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/nguyenthanh2308/Do_an_CNPM_1" target="_blank" rel="noopener noreferrer">Xem mã nguồn ↗</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Project 3 -->
-          <div class="project-card scale-in delay-3" data-category="tool">
+          <article class="project-card fade-in" data-category="architecture">
             <div class="project-thumbnail">
-              <img src="assets/images/projects/project-3.png" alt="Developer Tool" class="project-thumbnail-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="project-thumbnail-placeholder" style="display:none">🔧</div>
+              <div class="project-thumbnail-placeholder" aria-hidden="true">🛒</div>
               <div class="project-num-badge">03</div>
-              <div class="project-overlay">
-                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
-                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
-              </div>
             </div>
             <div class="project-body">
-              <span class="project-category">Developer Tool</span>
-              <h3 class="project-title">Developer Tool</h3>
-              <p class="project-desc">
-                A useful tool or utility you built. What does it do? How does it help developers or users?
-              </p>
+              <span class="project-category">Microservices</span>
+              <h3 class="project-title">E-Commerce Microservices</h3>
+              <p class="project-desc">Ứng dụng thương mại điện tử gồm dịch vụ xác thực, sản phẩm, đơn hàng, báo cáo và giao diện khách hàng. Các dịch vụ dùng ASP.NET Core, với MySQL và SQLite cho dữ liệu.</p>
               <div class="project-tags">
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">Python</span>
-                <span class="project-tag">CLI</span>
+                <span class="project-tag">ASP.NET Core 8</span>
+                <span class="project-tag">Microservices</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">SQLite</span>
+                <span class="project-tag">JWT</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/nguyenthanh2308/SOA_BTH_3" target="_blank" rel="noopener noreferrer">Xem mã nguồn ↗</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Project 4 -->
-          <div class="project-card scale-in delay-4" data-category="web">
+          <article class="project-card fade-in" data-category="web">
             <div class="project-thumbnail">
-              <img src="assets/images/projects/project-4.png" alt="Another Web Project" class="project-thumbnail-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="project-thumbnail-placeholder" style="display:none">🚀</div>
+              <div class="project-thumbnail-placeholder" aria-hidden="true">🌸</div>
               <div class="project-num-badge">04</div>
-              <div class="project-overlay">
-                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
-                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
-              </div>
             </div>
             <div class="project-body">
-              <span class="project-category">Web Application</span>
-              <h3 class="project-title">Another Web Project</h3>
-              <p class="project-desc">
-                Add your project description here. Keep it concise but informative — 2-3 sentences is perfect!
-              </p>
+              <span class="project-category">Website tĩnh</span>
+              <h3 class="project-title">Portfolio cá nhân</h3>
+              <p class="project-desc">Website giới thiệu bản thân với giao diện responsive, chuyển theme, hiệu ứng hạt và trình phát nhạc. Xây dựng bằng HTML, CSS và JavaScript thuần.</p>
               <div class="project-tags">
                 <span class="project-tag">HTML5</span>
                 <span class="project-tag">CSS3</span>
                 <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Vercel</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link project-link-primary" href="https://portfolio-nguyenthanh2308.vercel.app" target="_blank" rel="noopener noreferrer">Xem website ↗</a>
+                <a class="project-link" href="https://github.com/nguyenthanh2308/Portfolio" target="_blank" rel="noopener noreferrer">Xem mã nguồn ↗</a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="project-card scale-in delay-5" data-category="ui">
-            <div class="project-thumbnail">
-              <img src="assets/images/projects/project-5.png" alt="Creative Experiment" class="project-thumbnail-img"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="project-thumbnail-placeholder" style="display:none">💡</div>
-              <div class="project-num-badge">05</div>
-              <div class="project-overlay">
-                <a href="#" class="project-overlay-btn project-overlay-btn-primary" target="_blank">🔗 Demo</a>
-                <a href="#" class="project-overlay-btn project-overlay-btn-outline" target="_blank">⭐ Code</a>
-              </div>
-            </div>
-            <div class="project-body">
-              <span class="project-category">UI / Design</span>
-              <h3 class="project-title">Creative Experiment</h3>
-              <p class="project-desc">
-                Sometimes the best projects start as fun experiments! What creative idea did you bring to life?
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">Canvas API</span>
-                <span class="project-tag">CSS Animations</span>
-              </div>
-            </div>
-          </div>
-
+          </article>
         </div>
 
         <!-- CTA -->
         <div class="fade-in" style="text-align:center;margin-top:3.5rem;">
-          <p style="margin-bottom:1.5rem;font-size:1rem;">Want to see more? Check out my GitHub for all projects 🐙</p>
-          <a href="https://github.com/nguyenthanh2308" class="btn btn-primary" target="_blank">View All on GitHub ↗</a>
+          <p style="margin-bottom:1.5rem;font-size:1rem;">Xem thêm mã nguồn và quá trình phát triển trên GitHub 🐙</p>
+          <a href="https://github.com/nguyenthanh2308" class="btn btn-primary" target="_blank">Xem GitHub ↗</a>
         </div>
 
       </div>
